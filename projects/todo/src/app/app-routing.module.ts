@@ -16,6 +16,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./about/about.module').then((m) => m.AboutModule),
   },
+  { path: '', pathMatch: 'full', redirectTo: MENU_OPTIONS[0].path },
+  { path: '**', redirectTo: MENU_OPTIONS[0].path },
 ];
 
 @NgModule({

@@ -3,18 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'isi-todo',
   template: `
-    <p>
-      todo works!
-    </p>
+    <h2>todos</h2>
+    <isi-list></isi-list>
   `,
-  styles: [
-  ]
+  styles: [],
 })
 export class TodoComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
