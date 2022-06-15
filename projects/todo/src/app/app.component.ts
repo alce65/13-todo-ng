@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { iMenuOptions } from './interfaces/menu-options';
+
+export const MENU_OPTIONS: Array<iMenuOptions> = [
+  { path: 'home', label: 'Home' },
+  { path: 'todo', label: 'Tasks' },
+  { path: 'about', label: 'About' },
+];
 
 @Component({
   selector: 'isi-root',
@@ -7,13 +14,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'todo';
-  options: Array<any>;
+  menuOptions: Array<iMenuOptions>;
   constructor() {
-    this.options = [
-      { path: './index.html', label: 'Home' },
-      { path: './todo.html', label: 'Tasks' },
-      { path: '/about.html', label: 'About' },
-    ];
+    this.menuOptions = MENU_OPTIONS;
   }
 
   ngOnInit(): void {}

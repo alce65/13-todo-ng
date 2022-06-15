@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { iMenuOptions } from '../../interfaces/menu-options';
 
 @Component({
   selector: 'isi-menu',
@@ -6,8 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  @Input() options!: Array<any>;
+  @Input() options!: Array<iMenuOptions>;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.options);
+  }
 }
