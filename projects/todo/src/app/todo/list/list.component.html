@@ -1,9 +1,13 @@
-<p>Lista de tareas</p>
+<p>{{ title }}</p>
 
-<isi-add></isi-add>
+<isi-add (onAdd)="onAddHandle($event)"></isi-add>
 
 <ul>
   <li *ngFor="let task of tasks">
-    <isi-task [task]="task" (onDelete)="onDeleteHandle($event)"></isi-task>
+    <isi-task
+      [task]="task"
+      (onDelete)="onDeleteHandle($event)"
+      (onChange)="onChangeHandle($event)"
+    ></isi-task>
   </li>
 </ul>

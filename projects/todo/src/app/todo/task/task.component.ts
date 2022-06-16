@@ -9,13 +9,20 @@ import { TaskModel } from '../../models/task';
 export class TaskComponent implements OnInit {
   @Input() task!: TaskModel;
   @Output() onDelete: EventEmitter<number>;
+  @Output() onChange: EventEmitter<TaskModel>;
   constructor() {
     this.onDelete = new EventEmitter();
+    this.onChange = new EventEmitter();
   }
 
   ngOnInit(): void {}
 
-  deleteHandle(id: number): void {
-    this.onDelete.next(id);
+  deleteHandle(): void {
+    this.onDelete.next(this.task.id);
+  }
+
+  changeHandle() {
+    this.task.isCompleted = !this.task.isCompleted;
+    this.onChange.next(this.task);
   }
 }
