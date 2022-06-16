@@ -1,0 +1,11 @@
+<h2>Add TODO</h2>
+
+<input type="text" placeholder="Describe la tarea" [(ngModel)]="task.title" />
+
+<input
+  type="text"
+  placeholder="Responsable de la tarea"
+  [(ngModel)]="task.responsible"
+/>
+
+<button (click)="handleClick()">Guardar</button>

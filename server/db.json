@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Entender Angular",
+      "responsible": "Todos",
+      "isCompleted": false
+    },
+    {
+      "id": 2,
+      "title": "Entender los servicios con estado",
+      "responsible": "Casi Todos",
+      "isCompleted": false
+    },
+    {
+      "id": 3,
+      "title": "Entender HttpClient Service",
+      "responsible": "Todos",
+      "isCompleted": false
+    },
+    {
+      "id": 4,
+      "title": "Entender la vida",
+      "responsible": "Ninguno",
+      "isCompleted": false
+    }
+  ]
+}
